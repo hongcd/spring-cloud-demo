@@ -4,7 +4,7 @@ spring:
       name: hongcd
       password: 123456
   application:
-    name: btms
+    name: bms
 
 eureka:
   client:
