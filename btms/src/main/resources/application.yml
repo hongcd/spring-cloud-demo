@@ -1,0 +1,16 @@
+spring:
+  security:
+    user:
+      name: hongcd
+      password: 123456
+  application:
+    name: btms
+eureka:
+  client:
+    service-url:
+      defaultZone: >-
+        http://${spring.security.user.name}:${spring.security.user.password}@eureka-server:8761/eureka/,
+        http://${spring.security.user.name}:${spring.security.user.password}@eureka-server:8762/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${eureka.instance.hostname}:${server.port}

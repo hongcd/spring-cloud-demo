@@ -1,0 +1,6 @@
+server:
+  port: 8301
+
+eureka:
+  instance:
+    hostname: btms
