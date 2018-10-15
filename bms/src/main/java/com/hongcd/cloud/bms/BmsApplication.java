@@ -1,8 +1,7 @@
 package com.hongcd.cloud.bms;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.client.SpringCloudApplication;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
@@ -12,8 +11,7 @@ import org.springframework.web.client.RestTemplate;
  * @author HongD
  * @date 2018-10-15
  */
-@EnableDiscoveryClient
-@SpringBootApplication
+@SpringCloudApplication
 public class BmsApplication {
 
     public static void main(String[] args) {

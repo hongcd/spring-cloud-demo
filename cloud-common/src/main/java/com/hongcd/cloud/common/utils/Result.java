@@ -61,8 +61,8 @@ public class Result<T> {
      * @param msg
      * @return
      */
-    public static Result<?> fail(int code, String msg) {
-        return new Result<>(code, msg);
+    public static <T> Result<T> fail(int code, String msg) {
+        return new Result<>(code, msg, null);
     }
 
     /**
@@ -70,7 +70,7 @@ public class Result<T> {
      * @param msg
      * @return
      */
-    public static Result<?> fail(String msg) {
+    public static <T> Result<T> fail(String msg) {
         return fail(FAIL, msg);
     }
 }
