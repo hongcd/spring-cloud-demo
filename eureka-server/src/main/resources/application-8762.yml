@@ -4,6 +4,8 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@eureka-server:8761/eureka/
+      defaultZone: >-
+        http://${spring.security.user.name}:${spring.security.user.password}@eureka-server:8763/eureka/,
+        http://${spring.security.user.name}:${spring.security.user.password}@eureka-server:8761/eureka/
   instance:
     hostname: eureka-server

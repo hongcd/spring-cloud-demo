@@ -11,7 +11,8 @@ eureka:
     service-url:
       defaultZone: >-
         http://${spring.security.user.name}:${spring.security.user.password}@eureka-server:8761/eureka/,
-        http://${spring.security.user.name}:${spring.security.user.password}@eureka-server:8762/eureka/
+        http://${spring.security.user.name}:${spring.security.user.password}@eureka-server:8762/eureka/,
+        http://${spring.security.user.name}:${spring.security.user.password}@eureka-server:8763/eureka/
   instance:
     prefer-ip-address: true
     instance-id: ${eureka.instance.hostname}:${server.port}

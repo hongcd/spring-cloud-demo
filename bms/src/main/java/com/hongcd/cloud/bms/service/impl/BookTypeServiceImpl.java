@@ -19,6 +19,11 @@ public class BookTypeServiceImpl extends BaseService implements BookTypeService 
     @Autowired
     private RestTemplate restTemplate;
 
+    /**
+     * FIXME 第一次启动，不管结果如何都会调用errorGetBookTypeFallback，原因待查
+     * @param bookName
+     * @return
+     */
     @Override
     @HystrixCommand(fallbackMethod = "errorGetBookTypeFallback")
     public Result<String> getBookType(String bookName) {
